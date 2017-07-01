@@ -1,0 +1,70 @@
+.discount_info_body{
+    width: 100%;
+    padding: 0;
+}
+.getmoneyctrl_news {
+    position: fixed;
+    top: 0;
+}
+.nav_banner{
+    margin-top: -35px;
+    height: 40px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    position: fixed;
+}
+.nav_banner_shop,.nav_banner_area,.nav_banner_price{
+    flex: 3;
+    height: 40px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    text-align:center;
+    font-size: 14px;
+}
+.nav_banner_search{
+    flex: 1;
+    height: 40px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    text-align: center;
+}
+.nav_banner_shoplist{
+    width: 334%;
+    display: none;
+}
+.nav_banner_arealist {
+    width: 334%;
+    display: none;
+    position: absolute;
+    left: 0;
+}
+.choosed{
+    display: block;
+}
+.b_grey{
+    background: #ccc!important;
+}
+.nav_banner_shop .nav_banner_shoplist .nav_banner_shoplistul{
+    width: 100%;
+
+}
+.nav_banner_arealistul {
+    width: 100%;
+}
+.nav_banner_shop .nav_banner_shoplist .nav_banner_shoplistul
+ li,.nav_banner_arealistul li {
+    background: #fff;
+    list-style: none;
+    text-align: left;
+    padding-left: 25px;
+    line-height: 40px;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+
+}
+.discount_info_body {
+    margin-top: 85px;
+}

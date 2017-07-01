@@ -1,0 +1,85 @@
+.getmoneyctrl_news{
+    background: red;
+}
+.baicaijia_nav{
+    background: #fff;
+    font-size: 14px;
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+
+}
+.baicaijia_nav .baicaijia_list {
+    width:160%;
+    height: 40px;
+}
+.baicaijia_nav ul li {
+    float: left;
+    line-height: 40px;
+    padding: 10px;
+}
+.selected{
+    color: red;
+}
+.baicaijia_info_body {
+    width: 90%;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.baicaijia_info_body li{
+    width: 100%;
+    display: flex;
+}
+.baicaijia_info_body li .b_pic{
+    flex: 1;
+}
+.baicaijia_info_body li .b_pic img{
+    width: 150px;
+}
+.baicaijia_info_body li .b_des{
+    flex: 1;
+}
+.baicaijia_info_body li .b_des .b_des_name{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.baicaijia_info_body li .b_des .b_des_range{
+    display: inline-block;
+    width: 100px;
+    border: 1px solid deeppink;
+    background: pink;
+    height: 18px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+.baicaijia_info_body li .b_des .b_des_range_inner{
+    display: inline-block;
+    width: 75px;
+    border: 1px solid deeppink;
+    background: crimson;
+    height: 16px;
+    border-radius: 15px;
+}
+.b_des_youhui {
+    margin-top: 15px;
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+    border: 1px dashed deeppink;
+    color: palevioletred;
+}
+.baicaijia_info_body li .b_des .b_des_xiadan {
+height: 30px;
+    width: 60px;
+    background: orangered;
+    color: #fff;
+    font-size: 13px;
+    margin-top: -30px;
+    margin-left: 130px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+}

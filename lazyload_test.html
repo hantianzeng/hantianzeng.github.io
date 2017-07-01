@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <style>
+        img{
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<div>
+    <img class="lazy" data-original="images/setting-logo.png" width="140" height="180">
+    <span>我是第一张图片</span>
+</div>
+<img class="lazy" data-original="images/smallFace1.png" width="140" height="180">
+<img class="lazy" data-original="images/smallFace2.png" width="140" height="180">
+<img class="lazy" data-original="images/smallFace3.png" width="140" height="180">
+<img class="lazy" data-original="images/smallFace4.png" width="140" height="180">
+<img class="lazy" data-original="images/smallFace5.png" width="140" height="180">
+<img class="lazy" data-original="images/smallFace2.png" width="140" height="180">
+<img class="lazy" data-original="images/smallFace1.png" width="140" height="180">
+
+<div class="box1">21436445<div class="box2">123</div></div>
+<script>
+    $('.box1').click(function (){
+        $('.box1').text('123325476');
+    })
+
+</script>
+<script>
+    $(function() {
+        //$("img").lazyload({effect: "fadeIn"});//这样对全局的图片都有效
+        //$("img.lazy").lazyload({ threshold :180});
+        //以上实例的含义是：在图片距离屏幕180px时提前载入：
+        $("img.lazy").lazyload({effect: "fadeIn",
+            placeholder : "images/smallFace2.png"});
+    });
+</script>
+</body>
+</html>

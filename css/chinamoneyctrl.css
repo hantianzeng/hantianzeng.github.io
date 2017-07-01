@@ -1,0 +1,77 @@
+.chinaProduct_info{
+    width: 90%;
+    padding: 5px;
+}
+.chinaProduct_info_head{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.chinaProduct_info_details{
+    padding: 10px;
+    font-size: 12px;
+    color: #ddd;
+}
+.chinaProduct_info_word{
+    line-height: 22px;
+}
+.chinaProduct_info_word img{
+    background-size: 70px;
+    width: 70px;
+    height: 70px;
+    float: right;
+}
+.chinaProduct_info_bigImg {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto ;
+    margin-top: 30px;
+}
+.chinaProduct_info_bigImg img{
+    width: 320px;
+}
+.chinaProduct_info_buy{
+margin-top: 35px;
+
+}
+.chinaProduct_info_buy .chinaProduct_info_buy_head{
+    height: 40px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: orange;
+}
+.chinaProduct_info_buy_city_list{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+}
+.chinaProduct_info_comment{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+/*调整动态加载过来的数据样式*/
+#disstorck{
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+}
+#disstorck li{
+    width: 100%;
+    border: 1px solid #cce;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+#disstorck li strong{
+    padding-left: 10px;
+    color: orange;
+}

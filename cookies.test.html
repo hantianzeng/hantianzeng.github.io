@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>记录用户名和密码到Cookie中</title>
+    <script src="js/jquery-1.12.2.min.js"></script>
+</head>
+<body>
+<!--练习deferred 对象-->
+<li class="container">点击我1</li>
+<li class="container">点击我2</li>
+<li class="container">点击我3</li>
+
+
+<!--
+JS如下：
+-->
+<script>
+    var lists = $(".container");
+
+    for(var i = 0, ilen = lists.length; i < ilen; i++) {
+
+        $(lists[i]).bind('click',function(){
+/*浏览器触发线程，和定时事件类似，都会被放在队列中，
+* 然后等待其余代码执行完毕，会触发点击事件*/
+            console.log(i); // 打印3
+            console.log($(this).index())
+
+        });
+
+    }
+    /*用户单击一个已附加有单击
+    事件处理器dom元素时，会有一个单击事件排入队列，
+    但是该单击事件处理器要
+    等到当前所有正在运行的代码均已结束才会执行。*/
+</script>
+
+<script>
+    var def=new $.Deferred();
+    console.log(def);
+    def.resolve();  //pending -- resolved
+    def.done(function () {
+       // alert('you are right!')
+    })
+    /*一旦def 的状态切换了，那么接下来写的对应状态的回调函数，会立即执行*/
+    //是一个具有多种方法的对象
+    /*always
+     done
+     fail
+     notify
+     :
+     ()
+     notifyWith
+     :
+     (a,c)
+     pipe
+     :
+     ()
+     progress
+     :
+     ()
+     promise
+     :
+     (a)
+     reject
+     :
+     ()
+     rejectWith
+     :
+     (a,c)
+     resolve
+     :
+     ()
+     resolveWith
+     :
+     (a,c)
+     state
+     :
+     ()
+     then
+     :
+     ()*/
+    //有3种状态
+    //pending（待定）、resolved（成功）、rejected（失败）
+  var promise=def.promise();
+    console.log(promise);
+    /*只有绑定回调的API，没有状态转换的API*/
+    /*假定有一个ajax请求，需要将返回的数据进行3个独立的动作处理
+    * 这样讲数据获取和数据处理完全分离开来，使代码看起来更优雅*/
+    /*
+    * 该场景有一定的实践价值，比如一个业务网站，
+    * 页面上有多个展示模块都是通过ajax问后台拿数
+    * 据的，如果页面一进来，同时向后台发好
+    * 几个ajax请求，会瞬间增加后台IO的压力，
+    * 可能会增加用户等待界面反馈数据的时间，
+    * 造成体验下降。在这种情况下，把ajax请求作
+    * 为队列处理是比较合适的，
+    * 可按重要性逐步请求获取数据，提高性能和渲染体验。*/
+/*    a.then(function (){
+        return b()
+    }).then(function (){
+        return c()
+    }).then(function (){
+        return d()
+    })*/
+    /*特点：一旦任务链条断了，那么后续任务将不会执行*/
+   function test (){
+       setTimeout(function (){
+           console.log(1234);
+       },2000);
+       console.log(5678);
+   }
+    for(var i = 1; i <= 3; i++) {
+
+        setTimeout(function(){
+
+            console.log(i);
+
+        },100);
+
+    }
+    //4 4 4
+    /*解析：*/
+    setTimeout(function(){
+
+        console.log("打印我，我是异步执行的");
+
+    },50);
+
+    console.log("我是新来的，我要先执行");
+  var id1=setTimeout(function (){
+      console.log(id1);
+  },1000)
+    console.log(id1);  //5
+
+    setTimeout(function(){console.log('do');},0);
+    var i=0;
+    while(i<1){
+        console.log(i);
+        i++;
+    }
+
+</script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+    console.log($.cookie());
+</script>
+</body>
+</html>  

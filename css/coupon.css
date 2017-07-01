@@ -1,0 +1,30 @@
+.logo_list{
+    width:100%;
+    padding: 5px;
+}
+.logo_list_ul{
+   margin: 0 auto;
+}
+.logo_list li{
+    width: 30%;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+.logo_list .logo_pic{
+    margin: 0 auto;
+
+}
+.logo_list .logo_pic img{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+}
+.logo_list li p{
+    text-align: center;
+    padding-bottom: 5px;
+}

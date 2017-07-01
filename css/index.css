@@ -1,0 +1,249 @@
+.mmm_layout{
+    width: 100%;
+    /*最大宽度*/
+    max-width: 640px;
+    /*最小宽度*/
+    min-width: 320px;
+    margin:0 auto;
+}
+
+/*顶部信息块*/
+.mmm_news{
+    width:100%;
+    max-width:640px;
+    height: 40px;
+    background: #ff7d00;
+    position: absolute;
+    top: 0;
+}
+.mmm_news .mmm_logo{
+    margin: 10px;
+    width: 35%;
+}
+.mmm_news .mmm_logo img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.mmm_news .app_download{
+    position: absolute;
+    top:8px;
+    right: 15px;
+    width: 30px;
+
+}
+.mmm_news .app_download img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+/*顶部搜索块*/
+.mmm_search{
+    width: 100%;
+    max-width: 640px;
+    height: 50px;
+    background: #fff;
+    position: relative;
+    top: 40px;
+    margin-bottom: 10px;
+}
+.mmm_search .mmm_searchBox{
+    width: 100%;
+    height: 100%;
+    padding-left:10px;
+    padding-right:10px;
+
+}
+
+.mmm_searchBox > input{
+    width: 80%;
+    height: 30px;
+    margin-top:10px;
+    border-radius: 15px;
+    color: #666;
+    padding-left: 15px;
+}
+.mmm_searchBox > .mmm_btn{
+    width: 15%;
+    height: 30px;
+    margin-top:10px;
+    border-radius: 15px;
+    background-color:#ff7d00;
+    padding-left: 10px;
+    color:#fff;
+    border: none;
+    margin-left: 10px;
+}
+/*使用伪元素添加放大 镜*/
+.mmm_searchBox::before{
+    content: "";
+    width: 27px;
+    height: 23px;
+    position: absolute;
+    background: url("../images/jd-sprites.png");
+    background-size: 200px 200px;
+    background-position: -56px -108px;
+    right: 100px;
+    top:15px;
+}
+
+/*导航块样式*/
+.mmm_nav{
+    width: 100%;
+    padding:10px 0;
+    background-color: #fff;
+    margin-top: 50px;
+}
+.mmm_nav li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-top:5px;
+}
+.mmm_nav li img{
+    width: 50px;
+}
+.mmm_nav li p{
+    line-height:25px;
+}
+/*产品块*/
+.mmm_product{
+    margin-top: 10px;
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+}
+.mmm_product .mmm_product_head{
+    width: 100%;
+    height: 40px;
+    background: #ff7d00;
+    position: relative;
+}
+.mmm_product .mmm_product_head span{
+    color: #fff;
+    font-size: 16px;
+    padding-left: 15px;
+    line-height: 40px;
+}
+.mmm_product .mmm_product_head a{
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    line-height: 22px;
+    text-align: center;
+    font-family: simsun;
+}
+.mmm_product .mmm_product_list{
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+
+}
+.mmm_product .mmm_product_list ul{
+    width: 100%;
+
+}
+.mmm_product .mmm_product_list ul li{
+    display: flex;
+
+}
+.mmm_product .mmm_product_list ul li .product_pic{
+    flex: 1;
+    height: 50px;
+    margin: 15px;
+}
+.mmm_product .mmm_product_list ul li .product_desc{
+    flex: 2;
+    padding: 15px;
+    font-size: 15px;
+}
+.mmm_product .mmm_product_list ul li .product_desc .product_time{
+    color: #ccc;
+    display: block;
+    font-size: 10px;
+    margin-top: 20px;
+}
+.mmm_product .mmm_product_list ul li .product_desc .product_dis{
+    width: 15px;
+    height: 15px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 10px;
+
+}
+.mmm_product .mmm_product_list .more_prod_info{
+    height: 40px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 5%;
+    text-align: center;
+    line-height: 40px;
+    color: #aaa;
+}
+.product_pic img{
+    width: 100px;
+}
+/*品牌排行*/
+.mmm_brand{
+    height: 40px;
+    width: 100%;
+    background: #ff7d00;
+    position: relative;
+}
+.mmm_brand span{
+    line-height: 40px;
+    font-size: 16px;
+    color:#fff;
+    padding-left: 15px;
+}
+.mmm_brand a {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    color: #fff;
+    line-height: 22px;
+    text-align: center;
+    font-family: simsun;
+}
+/*底部*/
+.mmm_footer{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+.mmm_footer .mmm_footer_login,.mmm_footer .mmm_footer_signUp,.mmm_footer .mmm_footer_toTop{
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #eee;
+    border: 1px solid #ccc;
+}
+/*版权信息*/
+.mmm_copyRight{
+    height: 60px;
+    width: 100%;
+    background: #eee;
+    text-align: center;
+    padding-top: 15px;
+}
+.plist{
+    height: 170px;
+    overflow: hidden;
+}
+.selected{
+    height:250px ;
+}

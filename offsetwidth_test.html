@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div { width:100px; height:30px; margin:10px; background:green;}
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<script>
+/*给每个div都绑定自己的定时器，这样动作就会彼此独立*/
+
+    window.onload = function(){
+        var aDiv = document.getElementsByTagName("div");
+
+        for(var i=0; i<aDiv.length; i++){
+            aDiv[i].timer = null;
+            aDiv[i].onmouseover = function(){
+                startMove(this,400);
+            }
+            aDiv[i].onmouseout = function(){
+                startMove(this,100);
+            }
+        }
+    }
+
+
+    function startMove(obj, iTarget){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            var speed = (iTarget - obj.offsetWidth)/6;
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+            if(obj.offsetWidth == iTarget){
+                clearInterval(obj.timer);
+            } else {
+                obj.style.width = obj.offsetWidth + speed + "px";
+            }
+
+        },30);
+    }
+</script>
+
+
+<script>
+    var div1=document.querySelector('#div1');
+    console.log(div1.offsetWidth);  //包含边线和padding，因为取的盒模型的宽度；
+    console.log(div1.offsetLeft);//实际上也是计算盒模型的宽，盒模型是不包含margin值的，所以left就是margin和实际left；
+    /*offsetLeft = left + marginLeft
+     offsetTop = top +marginTop*/
+    console.log(div1.style.width);//只能获取行间样式
+    /*封装一个函数，能获取任意的样式，不管是不是行间样式*/
+    //获取行间任意样式
+    function getStyle(obj,name){
+        if(obj.currentStyle){    //IE
+            return obj.currentStyle[name];
+        } else {
+            return getComputedStyle(obj,false)[name];    //非IE
+        }
+
+    }
+    console.log(getStyle(div1, 'width')); //200px
+    console.log(getComputedStyle(div1, false)['width']);
+    //getComputedStyle是一个可以获取当前元素所有最终使用的CSS属性值。
+</script>
+</body>
+</html>

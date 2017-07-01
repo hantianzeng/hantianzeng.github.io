@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+<p><input type="text" id="username" value="" /></p>
+<p>
+    <input type="radio" name="like" value="刘德华" />刘德华
+    <input type="radio" name="like" value="张学友" />张学友
+</p>
+<p><input type="button" value="保存" /></p>
+<script>
+
+</script>
+<script type="text/javascript">
+    $(function () {
+
+        $("#username").val($.cookie("username"));
+        if ($.cookie("like") == "刘德华") {
+
+            $(":radio[value='刘德华']").attr("checked", 'checked')
+        }
+        else {
+            $(":radio[value='张学友']").attr("checked", 'checked')
+        }
+        $(":button").click(function () {
+            $.cookie("username", $("#username").val(), {
+                path: "C:\Users\Administrator\AppData\cookie", expires: 7
+            })
+            console.log($.cookie("username"));
+            $.cookie("like", $(":radio[checked]").val(), {
+                path: "C:\Users\Administrator\AppData\cookie", expires: 7
+            })
+            alert('用户信息已经保存！')
+        })
+    })
+    /*对象需要序列化，才能存储到cookie中*/
+  /*  $(function () {
+        if ($.cookie("o") == null) {
+            var o = { name: "张三", age: 24 };
+            var str = JSON.stringify(o);　　//对序列化成字符串然后存入cookie
+            $.cookie("o", str, {
+                expires:7  //设置时间，如果此处留空，则浏览器关闭此cookie就失效。
+            });
+            alert("cookie为空");
+        }
+        else {
+            var str1 = $.cookie("o");
+            var o1 = JSON.parse(str1);　　//字符反序列化成对象
+            alert(o1.name);　　　　　　　　//输反序列化出来的对象的姓名值
+        }
+    })*/
+</script>
+</body>
+</html>
